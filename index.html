@@ -1,34 +1,55 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
   <meta charset="UTF-8" />
-  <title>Happy Birthday Soniya</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #fff0f5;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-      text-align: center;
-    }
-    h1 {
-      font-size: 2.5rem;
-      color: #d63384;
-    }
-    p {
-      font-size: 1.2rem;
-    }
-  </style>
+  <title>Happy Birthday Soniya 🎉</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <h1>🎂 Happy Birthday Soniya 🎂</h1>
-  <p>With love from Yogesh 💖</p>
-  <p>Your surprise website is almost live! Stay tuned...</p>
+  <h1>🎂 हैप्पी बर्थडे सोनिया! 🎈</h1>
+
+  <div id="countdown"></div>
+  <div class="slideshow-container"></div>
+  <canvas id="heart-canvas"></canvas>
+
+  <div class="typewriter"><h2 id="typed-message"></h2></div>
+  <div class="flip-cards"></div>
+
+  <div id="scratch-card">
+    <canvas id="scratch-canvas"></canvas>
+    <div id="scratch-message">🎁 Soniya, Tum Best Ho! 🎉</div>
+  </div>
+
+  <div id="memory-game"></div>
+  <div id="quiz-container"></div>
+
+  <video id="birthday-video" controls>
+    <source src="video.mp4" type="video/mp4">
+  </video>
+
+  <audio id="bg-music" autoplay loop>
+    <source src="music.mp3" type="audio/mp3">
+  </audio>
+
+  <div id="photo-mosaic"></div>
+  <div class="timeline"></div>
+
+  <div id="balloons"></div>
+  <canvas id="fireworks-canvas"></canvas>
+
+  <div id="popup-gift" class="hidden"><p>🎁 Tumhare liye ek chhota sa gift!</p></div>
+
+  <div id="starry-sky"></div>
+
+  <div id="photo-frame">
+    <img src="frame.png" alt="Gift Frame">
+    <a download="Soniya_Gift_Frame.png" href="frame.png">Download</a>
+  </div>
+
+  <div id="funny-face">
+    <img src="funny.png" alt="Funny Face Swap">
+  </div>
 </body>
 </html>
