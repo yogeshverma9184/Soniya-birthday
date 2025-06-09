@@ -1,0 +1,88 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Soniya</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Comic Sans MS', cursive;
+      background: linear-gradient(to right, #ffe6f0, #ffe6ff);
+      text-align: center;
+      overflow-x: hidden;
+    }
+    h1 {
+      font-size: 3rem;
+      color: #e60073;
+      margin-top: 2rem;
+    }
+    p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+    #countdown {
+      font-size: 2rem;
+      color: #d63384;
+      margin-top: 1rem;
+    }
+    .slideshow {
+      margin: 2rem auto;
+      width: 90%;
+      max-width: 500px;
+    }
+    .slideshow img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .message {
+      font-size: 1.5rem;
+      margin: 2rem;
+      animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
+      border-right: .15em solid #000;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: black; }
+    }
+  </style>
+</head>
+<body>
+  <h1>✨ Happy Birthday Soniya! ✨</h1>
+  <p>With love from Yogesh ❤️</p>  <div id="countdown"></div>  <div class="slideshow">
+    <img id="slide" src="https://via.placeholder.com/500x300?text=Soniya+1" alt="slideshow" />
+  </div>  <div class="message">Today and every day, wishing only the best for you.</div>  <script>
+    // Countdown
+    const targetDate = new Date("June 10, 2025 00:00:00").getTime();
+    const countdownEl = document.getElementById("countdown");
+    setInterval(() => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      countdownEl.innerHTML = `⏰ ${days}d ${hours}h ${minutes}m ${seconds}s left`;
+    }, 1000);
+
+    // Slideshow
+    const slides = [
+      "https://via.placeholder.com/500x300?text=Soniya+1",
+      "https://via.placeholder.com/500x300?text=Soniya+2",
+      "https://via.placeholder.com/500x300?text=Soniya+3"
+    ];
+    let current = 0;
+    const slideImg = document.getElementById("slide");
+    setInterval(() => {
+      current = (current + 1) % slides.length;
+      slideImg.src = slides[current];
+    }, 3000);
+  </script></body>
+</html>
